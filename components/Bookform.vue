@@ -19,7 +19,14 @@
         </div>
         <div class="input-container">
           <label for="capa">Escolha o tipo de capa: </label>
-          <input id="capa" v-model="capa" type="text" name="capa">
+          <select id="capa" v-model="capa">
+            <option disabled value=" ">Escolha uma capa</option>
+            <option>Dura</option>
+            <option>Brochura</option>
+            <option>Espirral</option>
+            <option>Flexível</option>
+            <option>Canoa</option>
+          </select>
         </div>
         <div class="input-container">
           <label for="paginas">Informe a quantidade de páginas: </label>
@@ -28,6 +35,10 @@
         <div class="input-container">
           <label for="isbn">Informe o ISBN: </label>
           <input id="isbn" v-model="isbn" type="number" name="isbn">
+        </div>
+        <div class="acoes">
+          <input type="button" class="button" value="OK">
+          <input type="button" class="button" value="Cancelar">
         </div>
       </form>
     </div>
@@ -39,19 +50,35 @@ export default {
   name: 'BookForm' // Em homenagem aos livros....
 }
 
+
+
 </script>
 
 <style scoped>
 #book-form {
-  max-width: 500px;
-  margin: 0 auto;
-  border-bottom: 2px black;
+  max-width: 400px;
+  margin: 5px auto;
+
 }
 
 .input-container {
   display: flex;
-  flex-direction: columm;
+  flex-direction: column;
   margin-bottom: 20px;
+  border-bottom: 1px solid black;
+
+}
+
+.button {
+  background-color: #222;
+  color: #FCBA03;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.acoes {
+  align-items: center;
+  alignment: center;
 
 }
 
