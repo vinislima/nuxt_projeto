@@ -1,15 +1,58 @@
 <template>
   <div>
-
+    <div class="input-container">
+      <h1>Livros</h1>
+    </div>
+    <div>
+      <form id="book-form" @submit="registerBook">
+        <div class="input-container">
+          <label for="titulo">Informe o titulo do livro: </label>
+          <input id="titulo" v-model="nome" type="text" name="titulo" placeholder="Digite o título do livro">
+        </div>
+        <div class="input-container">
+          <label for="edicao">Informe a edição: </label>
+          <input id="edicao" v-model="edicao" type="number" name="edicao">
+        </div>
+        <div class="input-container">
+          <label for="data">Informe a data de publicação: </label>
+          <input id="data" v-model="data" type="date" name="data">
+        </div>
+        <div class="input-container">
+          <label for="capa">Escolha o tipo de capa: </label>
+          <input id="capa" v-model="capa" type="text" name="capa">
+        </div>
+        <div class="input-container">
+          <label for="paginas">Informe a quantidade de páginas: </label>
+          <input id="paginas" v-model="paginas" type="number" name="paginas">
+        </div>
+        <div class="input-container">
+          <label for="isbn">Informe o ISBN: </label>
+          <input id="isbn" v-model="isbn" type="number" name="isbn">
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Book-form'
+  name: 'BookForm' // Em homenagem aos livros....
 }
+
 </script>
 
 <style scoped>
+#book-form {
+  max-width: 500px;
+  margin: 0 auto;
+  border-bottom: 2px black;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: columm;
+  margin-bottom: 20px;
+
+}
 
 </style>

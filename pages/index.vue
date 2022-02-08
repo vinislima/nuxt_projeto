@@ -1,5 +1,5 @@
 <template>
-  <NuxtLogo />
+  <Bookform />
 </template>
 
 <script>
