@@ -1,17 +1,17 @@
 <template>
   <div>
     <div class="input-container">
-      <h1>Livros</h1>
+      <h1>Cadastro de Livros</h1>
     </div>
     <div>
-      <form id="book-form" @submit="registerBook">
+      <form id="book-form" @submit.prevent="registerBook" method="post">
         <div class="input-container">
           <label for="titulo">Informe o titulo do livro: </label>
-          <input id="titulo" v-model="nome" type="text" name="titulo" placeholder="Digite o título do livro">
+          <input id="titulo" v-model="titulo" type="text" name="titulo" placeholder="Digite o título do livro">
         </div>
         <div class="input-container">
           <label for="edicao">Informe a edição: </label>
-          <input id="edicao" v-model="edicao" type="number" name="edicao">
+          <input id="edicao" v-model="edicao" type="number" name="edicao" min="0">
         </div>
         <div class="input-container">
           <label for="data">Informe a data de publicação: </label>
@@ -20,7 +20,9 @@
         <div class="input-container">
           <label for="capa">Escolha o tipo de capa: </label>
           <select id="capa" v-model="capa">
-            <option disabled value=" ">Escolha uma capa</option>
+            <option disabled value=" ">
+              Escolha uma capa
+            </option>
             <option>Dura</option>
             <option>Brochura</option>
             <option>Espirral</option>
@@ -37,8 +39,8 @@
           <input id="isbn" v-model="isbn" type="number" name="isbn">
         </div>
         <div class="acoes">
-          <input type="button" class="button" value="OK">
-          <input type="button" class="button" value="Cancelar">
+          <input type="submit" class="button" value="OK">
+          <input type="button" class="button" value="Cancelar" >
         </div>
       </form>
     </div>
@@ -48,9 +50,8 @@
 <script>
 export default {
   name: 'BookForm' // Em homenagem aos livros....
+
 }
-
-
 
 </script>
 
