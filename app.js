@@ -10,7 +10,7 @@ const app = new Vue ({
     isbn: null
   },
   methods: {
-    registerBook: function() {
+    registerBook: function(e) {
       if (this.titulo && this.edicao && this.data && this.capa && this.paginas && this.isbn) {
         return true;
       }
@@ -74,6 +74,7 @@ const app = new Vue ({
           }
           return (check === str[str.length-1].toUpperCase());
         }
+        e.preventDefault();
       }
     }
   }
