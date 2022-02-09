@@ -4,7 +4,13 @@
       <h1>Cadastro de Livros</h1>
     </div>
     <div>
-      <form id="book-form" @submit.prevent="registerBook" method="post">
+      <form id="book-form" method="post" @submit="registerBook">
+        <p v-if="errors.length">
+          <b>Por favor, corrija o(s) seguinte(s) erro(s):</b>
+          <ul>
+            <li v-for="error in errors">{{ error }}</li>
+          </ul>
+        </p>
         <div class="input-container">
           <label for="titulo">Informe o titulo do livro: </label>
           <input id="titulo" v-model="titulo" type="text" name="titulo" placeholder="Digite o título do livro">
@@ -40,7 +46,7 @@
         </div>
         <div class="acoes">
           <input type="submit" class="button" value="OK">
-          <input type="button" class="button" value="Cancelar" >
+          <input type="button" class="button" value="Cancelar">
         </div>
       </form>
     </div>
