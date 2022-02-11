@@ -1,7 +1,10 @@
 <template>
   <div>
-    <table class="table">
-      <thead>
+    <h1 class="cabeca">
+      Livros cadastrados
+    </h1>
+    <table id="table">
+      <thead class="cabeca">
         <tr>
           <th scope="col">
             ISNB
@@ -20,6 +23,15 @@
           </th>
         </tr>
       </thead>
+      <tbody>
+        <tr class>
+          <th>isbn</th>
+          <td>título</td>
+          <td>edicao</td>
+          <td>capa</td>
+          <td>paginas</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
@@ -32,4 +44,20 @@ export default {
 
 <style scoped>
 
+table, th, td {
+  border: 1px solid;
+  padding: 10px;
+}
+
+#table {
+
+  max-width: 100%;
+  text-align: center;
+  margin: 5px auto;
+  border: 1px solid;
+}
+
+.cabeca {
+  text-align: center;
+}
 </style>

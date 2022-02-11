@@ -38,7 +38,7 @@
         </div>
         <div class="input-container">
           <label for="isbn">Informe o ISBN: </label>
-          <input id="isbn" v-model="isbn" type="number" name="isbn" maxlength="13">
+          <input id="isbn" v-model="isbn" type="number" name="isbn">
         </div>
         <div class="acoes">
           <input type="submit" class="button" value="OK">
@@ -62,12 +62,10 @@ export default {
 #book-form {
   max-width: 400px;
   margin: 5px auto;
-
 }
 
 .cabeca {
   text-align: center;
-
 }
 
 .input-container {
@@ -75,7 +73,6 @@ export default {
   flex-direction: column;
   margin-bottom: 20px;
   border-bottom: 1px solid black;
-
 }
 
 .button {
@@ -83,13 +80,10 @@ export default {
   color: #FCBA03;
   font-weight: bold;
   padding: 10px;
-
 }
 
 .acoes {
-  align-items: center;
-  alignment: center;
-
+  margin-bottom: 20px;
 }
 
 </style>
