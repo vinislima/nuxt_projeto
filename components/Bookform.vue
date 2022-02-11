@@ -1,7 +1,7 @@
 <template>
   <div id="cadastro">
     <div class="input-container">
-      <h1 class="titulo">
+      <h1 class="cabeca">
         Cadastro de Livros
       </h1>
     </div>
@@ -65,7 +65,7 @@ export default {
 
 }
 
-.titulo {
+.cabeca {
   text-align: center;
 
 }
