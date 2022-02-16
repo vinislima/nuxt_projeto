@@ -25,11 +25,11 @@
       </thead>
       <tbody>
         <tr class>
-          <th>isbn</th>
-          <td>título</td>
-          <td>edicao</td>
-          <td>capa</td>
-          <td>paginas</td>
+          <th>{{ isbn }}</th>
+          <td>{{ titulo }}</td>
+          <td>{{ edicao }}</td>
+          <td>{{ capa }}</td>
+          <td>{{ paginas }}</td>
         </tr>
       </tbody>
     </table>
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'CadastroLivro'
 }
