@@ -37,10 +37,14 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import Bookform from '~/components/Bookform'
 
 export default {
   name: 'CadastroLivro'
 }
+
+Vue.use(Bookform)
 </script>
 
 <style scoped>
