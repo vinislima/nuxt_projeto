@@ -38,13 +38,13 @@
 
 <script>
 import Vue from 'vue'
-import Bookform from '~/components/Bookform'
+import EnviaForm from '~/components/Bookform'
 
 export default {
   name: 'CadastroLivro'
 }
 
-Vue.use(Bookform)
+Vue.use(EnviaForm)
 </script>
 
 <style scoped>

@@ -6,7 +6,7 @@
       </h1>
     </div>
     <div>
-      <form id="book-form" method="post" @:submit.prevent="BookForm">
+      <form id="book-form" method="post">
         <div class="input-container">
           <label for="titulo">Informe o titulo do livro: </label>
           <input
@@ -47,7 +47,7 @@
             </option>
             <option>Dura</option>
             <option>Brochura</option>
-            <option>Espirral</option>
+            <option>Espiral</option>
             <option>Flexível</option>
             <option>Canoa</option>
           </select>
@@ -74,8 +74,8 @@
           >
         </div>
         <div class="acoes">
-          <input type="submit" class="button" value="OK">
-          <input type="button" class="button" value="Cancelar">
+          <input type="submit" class="button" value="OK" @click.prevent="enviaForm">
+          <input type="reset" class="button" value="Cancelar">
         </div>
       </form>
     </div>
@@ -84,7 +84,7 @@
 
 <script>
 export default {
-  name: 'BookForm',
+  name: 'enviaForm',
   data () {
     return {
       titulo: '',
@@ -96,21 +96,8 @@ export default {
     }
   },
   methods: {
-    async BookForm () {
-      /* eslint-disable no-unused-vars */
-      const res = await fetch('/backend-api', {
-        /* eslint-enable no-unused-vars */
-        method: 'POST',
-        headers: { 'Content-type': 'application/json' },
-        body: JSON.stringify({
-          titulo: this.titulo,
-          edicao: this.edicao,
-          data: this.data,
-          capa: this.capa,
-          paginas: this.paginas,
-          isbn: this.isbn
-        })
-      })
+    enviaForm () {
+      console.log(this.titulo, this.edicao, this.data, this.capa, this.paginas, this.isbn)
     }
   }
 }
