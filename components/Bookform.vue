@@ -30,12 +30,12 @@
           >
         </div>
         <div class="input-container">
-          <label for="data">Informe a data de publicação: </label>
+          <label for="publicacao">Informe a data de publicação: </label>
           <input
-            id="data"
-            v-model="data"
+            id="publicacao"
+            v-model="publicacao"
             type="date"
-            name="data"
+            name="publicacao"
             required
           >
         </div>
@@ -74,10 +74,49 @@
           >
         </div>
         <div class="acoes">
-          <input type="submit" class="button" value="OK" @click.prevent="enviaForm">
+          <input type="submit" class="button" value="OK" @click="onSubmit">
           <input type="reset" class="button" value="Cancelar">
         </div>
       </form>
+    </div>
+    <div>
+      <h1 class="cabeca">
+        Livros cadastrados
+      </h1>
+      <table id="table">
+        <thead class="cabeca">
+          <tr>
+            <th scope="col">
+              ISNB
+            </th>
+            <th scope="col">
+              Título
+            </th>
+            <th scope="col">
+              Edição
+            </th>
+            <th scope="col">
+              Publicação
+            </th>
+            <th scope="col">
+              Capa
+            </th>
+            <th scope="col">
+              Páginas
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class>
+            <th>{{ isbn }}</th>
+            <td>{{ titulo }}</td>
+            <td>{{ edicao }}</td>
+            <td>{{ publicacao }}</td>
+            <td>{{ capa }}</td>
+            <td>{{ paginas }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
@@ -101,7 +140,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>
@@ -131,6 +169,23 @@ export default {
 
 .acoes {
   margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid;
+  padding: 10px;
+}
+
+#table {
+
+  max-width: 100%;
+  text-align: center;
+  margin: 5px auto;
+  border: 1px solid;
+}
+
+.cabeca {
+  text-align: center;
 }
 
 </style>

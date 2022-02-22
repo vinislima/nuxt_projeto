@@ -1,19 +1,19 @@
 <template>
   <div>
+    <banner />
     <Bookform />
-    <cadastro-livro />
   </div>
 </template>
 
 <script>
 import bookform from '~/components/Bookform'
-import cadastroLivro from '~/components/CadastroLivro'
+import banner from '~/components/banner'
 
 export default {
   name: 'IndexPage',
   components: {
     bookform,
-    cadastroLivro
+    banner
   }
 
 }
